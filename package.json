@@ -2,8 +2,8 @@
 	"name": "pdf-generator",
 	"displayName": "PDF Generator",
 	"description": "Simplify PDF generation from .in files.",
-    "version": "0.0.1",
-    "publisher": "bebeaudr",
+	"version": "0.0.2",
+	"publisher": "bebeaudr",
 	"engines": {
 		"vscode": "^1.36.0"
 	},
@@ -20,23 +20,25 @@
 				"command": "pdfGenerator.commands.generatePDF",
 				"title": "Generate PDF"
 			}
-        ],
-        "keybindings": [{
-            "command": "pdfGenerator.commands.generatePDF",
-            "key": "ctrl+s",
-            "mac": "cmd+s",
-            "when": "resourceExtname == .in"
-        }],
-        "configuration": {
-            "title": "PDF Generator",
-            "properties": {
-                "pdfGenerator.resource.pythonPath": {
-                    "type": "string",
-                    "default": "python",
-                    "description": "The path to your system python executable. Default is \"python\"."
-                }
-            }
-        }
+		],
+		"keybindings": [
+			{
+				"command": "pdfGenerator.commands.generatePDF",
+				"key": "ctrl+s",
+				"mac": "cmd+s",
+				"when": "resourceExtname == .in"
+			}
+		],
+		"configuration": {
+			"title": "PDF Generator",
+			"properties": {
+				"pdfGenerator.resource.pythonPath": {
+					"type": "string",
+					"default": "python",
+					"description": "The path to your system python executable. Default is \"python\"."
+				}
+			}
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -52,13 +54,13 @@
 		"glob": "^7.1.4",
 		"mocha": "^6.1.4",
 		"typescript": "^3.3.1",
-        "tslint": "^5.12.1"
+		"tslint": "^5.12.1"
 	},
 	"dependencies": {
 		"python-shell": "^1.0.7"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/bbeaudry/pdf-generator.git"
-    }
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/bbeaudry/pdf-generator.git"
+	}
 }
