@@ -1,7 +1,7 @@
 {
 	"name": "pdf-generator",
 	"displayName": "PDF Generator",
-	"description": "Simplify PDF generation from .in files.",
+	"description": "PDF generation from .in files simplified.",
 	"version": "0.0.2",
 	"publisher": "bebeaudr",
 	"engines": {
