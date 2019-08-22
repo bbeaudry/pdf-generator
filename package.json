@@ -2,7 +2,7 @@
     "name": "pdf-generator",
     "displayName": "PDF Generator",
     "description": "PDF generation from .in files simplified.",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "publisher": "bebeaudr",
     "engines": {
         "vscode": "^1.36.0"
