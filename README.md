@@ -1,10 +1,10 @@
 # PDF Generator
 
-This simple extension generates a PDF file from a .in file template. There are several places in a PDF file where bytes-offsets are required. We use the PDFium fixup_template_pdf.py script to replace {{name}}-style variables in the input with calculated results.
+This simple extension generates a PDF file from a .in file template on save. There are several places in a PDF file where bytes-offsets are required. We use the PDFium `fixup_template_pdf.py` script to replace {{name}}-style variables in the input with calculated results.
 
 ## Features
 
-- [x] Generate PDF on `Ctrl+S` or `Cmd+S`
+- [x] Generate PDF on `Ctrl+S` or `Cmd+S`.
 
 ## Requirements
 
@@ -14,12 +14,18 @@ You need to have Python 2.7+ on your device. The default Python path used is `py
 
 This extension contributes the following settings:
 
-* `pdfGenerator.resource.pythonPath"`: the Python path used to run the Python script
+* `pdfGenerator.resource.pythonPath`: the Python path used to run the Python script.
 
 ## Release Notes
 
 ### 1.0.0
 
+Initial release. 
+
+### 1.1.0
+
+Updated the python script to work on Python <3.0.0. Tested from Python v2.7.13 to v3.6.1.
+
 ## Contributions
 
-We would be love to have you contribute on PDF Generator ❤️ Here's the repo: https://github.com/bbeaudry/pdf-generator.
+Want to contribute to PDF Generator and make it better? ⭐️ Here's the repo: https://github.com/bbeaudry/pdf-generator.
