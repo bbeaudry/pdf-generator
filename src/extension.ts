@@ -3,12 +3,12 @@ import * as path from "path";
 
 import { PythonShell } from "python-shell";
 
-const SCRIPTS_DIR = "out/scripts/";
-const SCRIPT_PATH = "fixup_pdf_template.py";
+const SCRIPTS_DIR = __dirname + "/scripts";
+const GENERATE_PDF_SCRIPT_PATH = "fixup_pdf_template.py";
 
 export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.commands.registerCommand("pdfGenerator.commands.generatePDF", () => {
-
+        console.log(__dirname);
         let activeTextEditor = vscode.window.activeTextEditor;
         if (activeTextEditor) {
             let filename = activeTextEditor.document.fileName;
@@ -22,7 +22,7 @@ export function activate(context: vscode.ExtensionContext) {
 
             // Verify pythonPath is valid
             PythonShell.getVersion(pythonPath as string).then((data) => {
-                PythonShell.run(SCRIPT_PATH, options, function (err, output) {
+                PythonShell.run(GENERATE_PDF_SCRIPT_PATH, options, function (err, output) {
                     if (err) {
                         vscode.window.showErrorMessage("Error while generating PDF. " + err.toString());
                         throw err;
