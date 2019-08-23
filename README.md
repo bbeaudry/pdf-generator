@@ -4,7 +4,8 @@ This simple extension generates a PDF file from a .in file template on save. The
 
 ## Features
 
-- [x] Generate PDF on `Ctrl+S` or `Cmd+S`.
+- [x] Generate PDF on save (for .in files).
+- [x] Generate PDF from command palette.
 
 ## Requirements
 
@@ -18,11 +19,11 @@ This extension contributes the following settings:
 
 ## Release Notes
 
-### 1.0.0
+### 1.0.x
 
 Initial release. 
 
-### 1.1.0
+### 1.1.x
 
 Updated the python script to work on Python <3.0.0. Tested from Python v2.7.13 to v3.6.1.
 

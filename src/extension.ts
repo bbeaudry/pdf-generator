@@ -7,8 +7,8 @@ const SCRIPTS_DIR = __dirname + "/scripts";
 const GENERATE_PDF_SCRIPT_PATH = "fixup_pdf_template.py";
 
 export function activate(context: vscode.ExtensionContext) {
-    let disposable = vscode.commands.registerCommand("pdfGenerator.commands.generatePDF", () => {
-        console.log(__dirname);
+
+    let generatePDFCommand = vscode.commands.registerCommand("pdfGenerator.commands.generatePDF", () => {
         let activeTextEditor = vscode.window.activeTextEditor;
         if (activeTextEditor) {
             let filename = activeTextEditor.document.fileName;
@@ -36,7 +36,15 @@ export function activate(context: vscode.ExtensionContext) {
         }
     });
 
-    context.subscriptions.push(disposable);
+    vscode.workspace.onDidSaveTextDocument((document: vscode.TextDocument) => {
+        let filename = document.fileName;
+        let extension = path.parse(filename).ext;
+        if (extension === ".in") {
+            vscode.commands.executeCommand("pdfGenerator.commands.generatePDF");
+        }
+    });
+
+    context.subscriptions.push(generatePDFCommand);
 }
 
 export function deactivate() { }

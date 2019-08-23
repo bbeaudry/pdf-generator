@@ -11,7 +11,7 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:pdfGenerator.commands.generatePDF"
+        "*"
     ],
     "main": "./out/extension.js",
     "contributes": {
@@ -30,14 +30,6 @@
                 }
             ]
         },
-        "keybindings": [
-            {
-                "command": "pdfGenerator.commands.generatePDF",
-                "key": "ctrl+s",
-                "mac": "cmd+s",
-                "when": "resourceExtname == .in"
-            }
-        ],
         "configuration": {
             "title": "PDF Generator",
             "properties": {
